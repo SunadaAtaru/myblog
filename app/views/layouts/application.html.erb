@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Myblog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -24,13 +25,12 @@
        <% if flash[:alert] %>
          <div class="alert alert-danger"><%= flash[:alert] %></div>
        <% end %>
+      <%# ==========ここにcontainerクラスを追加する========== %>
+      <div class="container">
        <%= yield %>
-
-       <%# ========== partial/footerを追加する ========== %>
-       <%= render 'partial/footer' %>
-
+      </div> 
+      
+     <%= render 'partial/footer' %>
     </div>
-    <%# ========== ここまで編集する ========== %>
-    
   </body>
 </html>
