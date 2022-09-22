@@ -24,6 +24,9 @@ class PostsController < ApplicationController
     @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
   end
   # ==========ここまで追加する==========
+  def show
+    @post = Post.find_by(id: params[:id])
+  end
 
   
   private
