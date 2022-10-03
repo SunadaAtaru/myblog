@@ -21,11 +21,11 @@ class PostsController < ApplicationController
     end
   end
 
-  # ==========ここから追加する==========
+  
   def index
     @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
   end
-  # ==========ここまで追加する==========
+  
   def show
     
   end
