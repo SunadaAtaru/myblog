@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users,
     controllers: { registrations: 'registrations' }
 
-  root 'posts#index'
+  root 'posts#index' ,format: "html"
 
   get '/users/:id', to: 'users#show', as: 'user'
 

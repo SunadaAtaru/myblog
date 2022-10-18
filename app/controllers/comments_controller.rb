@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
     else
       flash[:alert] = "コメントの削除に失敗しました"
     end
+  
   end
 
   private
