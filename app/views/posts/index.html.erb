@@ -61,8 +61,7 @@
                 <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "コメント ...", autocomplete: :off %>
               <% end %>
             </div>
-            <%# ==========ここまで編集する========== %>
-
+           <%= paginate @posts %>  
           </div>
         </div>
       </div>

@@ -15,3 +15,24 @@
 //   text-indent: 110%;
 //   white-space: nowrap;
 // }
+.page a,
+.next a,
+.last a,
+.first a,
+.prev a {
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.page a:hover,
+.next a:hover,
+.last a:hover,
+.first a:hover,
+.prev a:hover {
+  color: black;
+}
+
+.current {
+  font-weight: bold;
+}

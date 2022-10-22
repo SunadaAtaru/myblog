@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   
   def index
-    @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
+    @posts = Post.all.includes(:photos, :user).order('created_at DESC').page(params[:page])
   end
   
   def show
